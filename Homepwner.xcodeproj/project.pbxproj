@@ -16,6 +16,9 @@
 		BF64A7D916E803F0009914C1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BF64A7D816E803F0009914C1 /* Default.png */; };
 		BF64A7DB16E803F0009914C1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF64A7DA16E803F0009914C1 /* Default@2x.png */; };
 		BF64A7DD16E803F0009914C1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF64A7DC16E803F0009914C1 /* Default-568h@2x.png */; };
+		BF64A7E516E8063C009914C1 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF64A7E416E8063C009914C1 /* ItemsViewController.m */; };
+		BF64A7E816E8084F009914C1 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF64A7E716E8084F009914C1 /* BNRItem.m */; };
+		BF64A7EB16E8C10C009914C1 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BF64A7EA16E8C10C009914C1 /* BNRItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,12 @@
 		BF64A7D816E803F0009914C1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BF64A7DA16E803F0009914C1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BF64A7DC16E803F0009914C1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BF64A7E316E8063C009914C1 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemsViewController.h; path = ../ItemsViewController.h; sourceTree = "<group>"; };
+		BF64A7E416E8063C009914C1 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemsViewController.m; path = ../ItemsViewController.m; sourceTree = "<group>"; };
+		BF64A7E616E8084F009914C1 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		BF64A7E716E8084F009914C1 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		BF64A7E916E8C10C009914C1 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
+		BF64A7EA16E8C10C009914C1 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +87,14 @@
 		BF64A7CC16E803F0009914C1 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				BF64A7E316E8063C009914C1 /* ItemsViewController.h */,
+				BF64A7E416E8063C009914C1 /* ItemsViewController.m */,
 				BF64A7D516E803F0009914C1 /* HomepwnerAppDelegate.h */,
 				BF64A7D616E803F0009914C1 /* HomepwnerAppDelegate.m */,
+				BF64A7E616E8084F009914C1 /* BNRItem.h */,
+				BF64A7E716E8084F009914C1 /* BNRItem.m */,
+				BF64A7E916E8C10C009914C1 /* BNRItemStore.h */,
+				BF64A7EA16E8C10C009914C1 /* BNRItemStore.m */,
 				BF64A7CD16E803F0009914C1 /* Supporting Files */,
 			);
 			path = Homepwner;
@@ -167,6 +182,9 @@
 			files = (
 				BF64A7D316E803F0009914C1 /* main.m in Sources */,
 				BF64A7D716E803F0009914C1 /* HomepwnerAppDelegate.m in Sources */,
+				BF64A7E516E8063C009914C1 /* ItemsViewController.m in Sources */,
+				BF64A7E816E8084F009914C1 /* BNRItem.m in Sources */,
+				BF64A7EB16E8C10C009914C1 /* BNRItemStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
