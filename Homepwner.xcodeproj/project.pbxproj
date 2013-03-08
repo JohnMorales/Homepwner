@@ -19,6 +19,7 @@
 		BF64A7E516E8063C009914C1 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF64A7E416E8063C009914C1 /* ItemsViewController.m */; };
 		BF64A7E816E8084F009914C1 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF64A7E716E8084F009914C1 /* BNRItem.m */; };
 		BF64A7EB16E8C10C009914C1 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BF64A7EA16E8C10C009914C1 /* BNRItemStore.m */; };
+		BF64A7ED16E985A2009914C1 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF64A7EC16E985A2009914C1 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		BF64A7E716E8084F009914C1 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		BF64A7E916E8C10C009914C1 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		BF64A7EA16E8C10C009914C1 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		BF64A7EC16E985A2009914C1 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderView.xib; path = ../HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		BF64A7CC16E803F0009914C1 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				BF64A7EC16E985A2009914C1 /* HeaderView.xib */,
 				BF64A7E316E8063C009914C1 /* ItemsViewController.h */,
 				BF64A7E416E8063C009914C1 /* ItemsViewController.m */,
 				BF64A7D516E803F0009914C1 /* HomepwnerAppDelegate.h */,
@@ -170,6 +173,7 @@
 				BF64A7D916E803F0009914C1 /* Default.png in Resources */,
 				BF64A7DB16E803F0009914C1 /* Default@2x.png in Resources */,
 				BF64A7DD16E803F0009914C1 /* Default-568h@2x.png in Resources */,
+				BF64A7ED16E985A2009914C1 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
