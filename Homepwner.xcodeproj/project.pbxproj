@@ -20,6 +20,8 @@
 		BF64A7E816E8084F009914C1 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF64A7E716E8084F009914C1 /* BNRItem.m */; };
 		BF64A7EB16E8C10C009914C1 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BF64A7EA16E8C10C009914C1 /* BNRItemStore.m */; };
 		BF64A7ED16E985A2009914C1 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF64A7EC16E985A2009914C1 /* HeaderView.xib */; };
+		BFC1C5AE16EA927B00252769 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC1C5AD16EA927B00252769 /* DetailViewController.m */; };
+		BFC1C5B016EA92A200252769 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC1C5AF16EA92A200252769 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		BF64A7E916E8C10C009914C1 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		BF64A7EA16E8C10C009914C1 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 		BF64A7EC16E985A2009914C1 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderView.xib; path = ../HeaderView.xib; sourceTree = "<group>"; };
+		BFC1C5AC16EA927B00252769 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BFC1C5AD16EA927B00252769 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BFC1C5AF16EA92A200252769 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,9 @@
 				BF64A7E416E8063C009914C1 /* ItemsViewController.m */,
 				BF64A7D516E803F0009914C1 /* HomepwnerAppDelegate.h */,
 				BF64A7D616E803F0009914C1 /* HomepwnerAppDelegate.m */,
+				BFC1C5AC16EA927B00252769 /* DetailViewController.h */,
+				BFC1C5AD16EA927B00252769 /* DetailViewController.m */,
+				BFC1C5AF16EA92A200252769 /* DetailViewController.xib */,
 				BF64A7E616E8084F009914C1 /* BNRItem.h */,
 				BF64A7E716E8084F009914C1 /* BNRItem.m */,
 				BF64A7E916E8C10C009914C1 /* BNRItemStore.h */,
@@ -174,6 +182,7 @@
 				BF64A7DB16E803F0009914C1 /* Default@2x.png in Resources */,
 				BF64A7DD16E803F0009914C1 /* Default-568h@2x.png in Resources */,
 				BF64A7ED16E985A2009914C1 /* HeaderView.xib in Resources */,
+				BFC1C5B016EA92A200252769 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +198,7 @@
 				BF64A7E516E8063C009914C1 /* ItemsViewController.m in Sources */,
 				BF64A7E816E8084F009914C1 /* BNRItem.m in Sources */,
 				BF64A7EB16E8C10C009914C1 /* BNRItemStore.m in Sources */,
+				BFC1C5AE16EA927B00252769 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +315,7 @@
 				BF64A7E216E803F0009914C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
