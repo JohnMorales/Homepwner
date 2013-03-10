@@ -17,6 +17,8 @@
 @property (nonatomic,readwrite,strong) BNRItem* containedItem;
 @property (nonatomic,readwrite,weak) BNRItem* container;
 
+@property (nonatomic, copy) NSString *imageKey;
+
 +(id)randomItem;
 
 -(id)initWithItemName:(NSString*)name

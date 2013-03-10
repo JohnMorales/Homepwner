@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2DF3E016EC3C5C00B167CA /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2DF3DF16EC3C5C00B167CA /* BNRImageStore.m */; };
 		BF64A7C716E803F0009914C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF64A7C616E803F0009914C1 /* UIKit.framework */; };
 		BF64A7C916E803F0009914C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF64A7C816E803F0009914C1 /* Foundation.framework */; };
 		BF64A7CB16E803F0009914C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF64A7CA16E803F0009914C1 /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF2DF3DE16EC3C5C00B167CA /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		BF2DF3DF16EC3C5C00B167CA /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 		BF64A7C316E803F0009914C1 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF64A7C616E803F0009914C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BF64A7C816E803F0009914C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,8 @@
 				BF64A7D616E803F0009914C1 /* HomepwnerAppDelegate.m */,
 				BFC1C5AC16EA927B00252769 /* DetailViewController.h */,
 				BFC1C5AD16EA927B00252769 /* DetailViewController.m */,
+				BF2DF3DE16EC3C5C00B167CA /* BNRImageStore.h */,
+				BF2DF3DF16EC3C5C00B167CA /* BNRImageStore.m */,
 				BFC1C5AF16EA92A200252769 /* DetailViewController.xib */,
 				BF64A7E616E8084F009914C1 /* BNRItem.h */,
 				BF64A7E716E8084F009914C1 /* BNRItem.m */,
@@ -195,6 +200,7 @@
 				BF64A7E816E8084F009914C1 /* BNRItem.m in Sources */,
 				BF64A7EB16E8C10C009914C1 /* BNRItemStore.m in Sources */,
 				BFC1C5AE16EA927B00252769 /* DetailViewController.m in Sources */,
+				BF2DF3E016EC3C5C00B167CA /* BNRImageStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
