@@ -24,4 +24,6 @@
 - (IBAction)backgroundTapped:(id)sender;
 @property (nonatomic, strong) BNRItem *item;
 - (IBAction)takePicture:(id)sender;
+-(id)initForNewItem:(BOOL)isNew;
+@property (nonatomic, copy) void (^dismissBlock)(void);
 @end
