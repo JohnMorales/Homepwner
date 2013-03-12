@@ -93,4 +93,15 @@
   
   [[self tableView] reloadData];
 }
+-(BOOL)shouldAutorotate
+{
+  return YES;
+}
+-(NSUInteger)supportedInterfaceOrientations
+{
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+    return UIInterfaceOrientationMaskAll;
+  }
+  return UIInterfaceOrientationMaskPortrait;
+}
 @end

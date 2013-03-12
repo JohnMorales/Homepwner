@@ -22,7 +22,16 @@
 {
   [super viewDidLoad];
   
-  [[self view] setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+  UIColor *clr = nil;
+  
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+    clr = [UIColor colorWithRed:.875 green:.88 blue:.91 alpha:1];
+  }
+  else{
+    clr = [UIColor groupTableViewBackgroundColor];
+  }
+  
+  [[self view] setBackgroundColor:clr];
 }
 
 -(void)setItem:(BNRItem *)i
@@ -66,6 +75,14 @@
   [item setValueInDollars:[[valueField text] intValue]];
 }
 - (IBAction)takePicture:(id)sender {
+  
+  if ([imagePickerPopover isPopoverVisible])
+  {
+    [imagePickerPopover dismissPopoverAnimated:YES];
+    imagePickerPopover = nil;
+    return;
+  }
+  
   UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
   if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
   {
@@ -77,7 +94,15 @@
   
   [imagePicker setDelegate:self];
   
-  [self presentViewController:imagePicker animated:YES completion:nil];
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+  {
+    imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+    [imagePickerPopover setDelegate:self];
+    [imagePickerPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+  }
+  else {
+    [self presentViewController:imagePicker animated:YES completion:nil];
+  }
 }
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -97,7 +122,13 @@
   
   [[BNRImageStore sharedStore] setImage:image forKey:[item imageKey]];
   
-  [self dismissViewControllerAnimated:YES completion:nil];
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    [self dismissViewControllerAnimated:YES completion:nil];
+  } else {
+    [imagePickerPopover dismissPopoverAnimated:YES];
+    imagePickerPopover = nil;
+  }
+
   
   CFRelease(newUniqueIDString);
   CFRelease(newUniqueID);
@@ -109,5 +140,21 @@
 }
 - (IBAction)backgroundTapped:(id)sender {
   [[self view] endEditing:YES]; 
+}
+-(BOOL)shouldAutorotate
+{
+  return YES;
+}
+-(NSUInteger)supportedInterfaceOrientations
+{
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+    return UIInterfaceOrientationMaskAll;
+  }
+  return UIInterfaceOrientationMaskAll;
+}
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+  NSLog(@"User dismissed popover");
+  imagePickerPopover = nil;
 }
 @end
