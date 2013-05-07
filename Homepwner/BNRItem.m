@@ -9,7 +9,7 @@
 #import "BNRItem.h"
 
 @implementation BNRItem
-@synthesize itemName, serialNumber, valueInDollars, dateCreated, containedItem, container, imageKey;
+@synthesize itemName, serialNumber, valueInDollars, dateCreated, containedItem, container, imageKey, thumbnail, thumbnailData;
 
 +(id)randomItem{
     // Create an array of three adjectives
@@ -60,6 +60,47 @@
     return self;
 }
 
+-(UIImage *)thumbnail
+{
+  if (!thumbnailData) {
+    return nil;
+  }
+  if (!thumbnail ) {
+    thumbnail = [UIImage imageWithData:thumbnailData];
+  }
+  return thumbnail;
+}
+
+-(void)setThumbnailDataFromImage:(UIImage *)image
+{
+  CGSize originalImageSize = [image size];
+  
+  CGRect newRect = CGRectMake(0, 0, 40, 40);
+  
+  float ratio = MAX(newRect.size.width / originalImageSize.width, newRect.size.height / originalImageSize.height);
+  
+  UIGraphicsBeginImageContextWithOptions(newRect.size, NO, 0.0);
+  
+  UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:newRect cornerRadius:5.];
+  
+  [path addClip];
+  
+  CGRect projectRect;
+  projectRect.size.width = ratio * originalImageSize.width;
+  projectRect.size.height = ratio * originalImageSize.height;
+  projectRect.origin.x = (newRect.size.width - projectRect.size.width) / 2.;
+  projectRect.origin.y = (newRect.size.height - projectRect.size.height) /2.;
+  
+  [image drawInRect:projectRect];
+  
+  UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+  [self setThumbnail:smallImage];
+  
+  NSData *data = UIImagePNGRepresentation(smallImage);
+  [self setThumbnailData:data];
+  
+  UIGraphicsEndImageContext();
+}
 -(void)setContainedItem:(BNRItem *)i{
     containedItem = i;
     [i setContainer:self];
@@ -78,6 +119,7 @@
   [aCoder encodeObject:imageKey forKey:@"imageKey"];
   
   [aCoder encodeInt:valueInDollars forKey:@"valueInDollars"];
+  [aCoder encodeObject:thumbnailData forKey:@"thumbnailData"];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -90,6 +132,8 @@
     [self setValueInDollars:[aDecoder decodeIntForKey:@"valueInDollars"]];
     
     dateCreated = [aDecoder decodeObjectForKey:@"dateCreated"];
+    
+    thumbnailData = [aDecoder decodeObjectForKey:@"thumbnailData"];
   }
   return self;
 }
